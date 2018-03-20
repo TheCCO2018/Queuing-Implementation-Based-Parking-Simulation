@@ -7,3 +7,13 @@ C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AutoparkQueue\Auto
 C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AutoparkQueue\AutoparkQueue\bin\Debug\AutoparkQueue.pdb
 C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.exe
 C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.pdb
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Debug\AutoparkQueue.exe.config
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Debug\AutoparkQueue.exe
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Debug\AutoparkQueue.pdb
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.csprojResolveAssemblyReference.cache
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.Form1.resources
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.Properties.Resources.resources
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.csproj.GenerateResource.Cache
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.csproj.CoreCompileInputs.cache
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.exe
+D:\Github\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Debug\AutoparkQueue.pdb

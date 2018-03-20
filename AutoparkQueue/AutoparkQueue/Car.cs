@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace AutoparkQueue
             this.carType = carType;
             this.exitTime = exitTime;
             this.parkTime = 0;
+            this.imageUrl = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\assets\img\cars\car-" + carType + ".png");
         }
 
     }
