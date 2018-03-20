@@ -70,23 +70,11 @@ namespace AutoparkQueue
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            //Node curr = ll.front;
-
-            //Car C;
-            //Node n;
-            //Random r = new Random();
-            //C = new Car(r.Next(1, 10), r.Next(10, 300));
-            //C.parkTime += C.exitTime;
-            //for (int i = 0; i < ll.size; i++)
-            //{
-            //    C.parkTime += curr.Data.exitTime;
-            //    if (curr.Next != null)
-            //    {
-            //        curr = curr.Next;
-            //    }
-            //}  
-            //n = new Node(C, null);
-            //ll.Insert(n);
+         
+            
+         
+            
+           
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -100,6 +88,64 @@ namespace AutoparkQueue
             SecondPanel.Visible = true;
             SecondPanel.BringToFront();
             
+        }
+
+        private void btnAracEkle_Click(object sender, EventArgs e)
+        {
+            AracEkle();
+        }
+        
+        public void AracSil()
+        {
+            Node Remove_PQL;
+            Node Remove_FLL;
+            Remove_PQL = _PQL.Remove();
+            Remove_FLL = _FLL.Remove();
+        }
+
+        public void AracEkle()
+        {
+            Node curNode_PQL = _PQL.front;
+            Node curNode_FLL = _FLL.front;
+            Car car;
+            Node node_PQL;
+            Node node_FLL;
+
+            Random Rng = new Random();
+            car = new Car(Rng.Next(1, 10), Rng.Next(10, 300));
+            node_PQL = new Node(car, null);
+            node_FLL = new Node(car, null);
+
+            node_PQL.Data.parkTime = node_PQL.Data.exitTime;
+
+            for (int i = 0; i < _PQL.size; i++)
+            {
+                node_PQL.Data.parkTime += curNode_PQL.Data.exitTime;
+                if (curNode_PQL.Next != null)
+                {
+                    curNode_PQL = curNode_PQL.Next;
+                }
+            }
+
+            node_FLL.Data.parkTime = node_FLL.Data.exitTime;
+            for (int i = 0; i < _FLL.size; i++)
+            {
+                node_FLL.Data.parkTime += curNode_FLL.Data.exitTime;
+                if (curNode_PQL.Next != null)
+                {
+                    curNode_FLL = curNode_FLL.Next;
+                }
+            }
+
+
+            _FLL.Insert(node_PQL);
+            _PQL.Insert(node_FLL);
+
+        }
+
+        private void btnAracsil_Click(object sender, EventArgs e)
+        {
+            AracSil();
         }
     }
 }
