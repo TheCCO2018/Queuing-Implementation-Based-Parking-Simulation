@@ -45,7 +45,7 @@
             this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.carImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.enterTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPQEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
@@ -205,6 +205,7 @@
             this.btnDevamEt.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDevamEt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDevamEt.BackgroundImage")));
             this.btnDevamEt.ButtonText = "Devam Et";
+            this.btnDevamEt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDevamEt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevamEt.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnDevamEt.IdleBorderThickness = 1;
@@ -250,14 +251,16 @@
             this.numbOfCar,
             this.carImage,
             this.carPlate,
-            this.enterTime,
+            this.parkedTime,
             this.exitFIFOTime,
             this.exitPQTime});
             this.mlvwTablesOfCars.Depth = 0;
             this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mlvwTablesOfCars.FullRowSelect = true;
             this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.mlvwTablesOfCars.LargeImageList = this.ilistFIFO;
             this.mlvwTablesOfCars.Location = new System.Drawing.Point(10, 320);
             this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
@@ -285,11 +288,11 @@
             this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.carPlate.Width = 100;
             // 
-            // enterTime
+            // parkedTime
             // 
-            this.enterTime.Text = "Enter Time";
-            this.enterTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.enterTime.Width = 200;
+            this.parkedTime.Text = "Parked Time";
+            this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.parkedTime.Width = 200;
             // 
             // exitFIFOTime
             // 
@@ -308,6 +311,7 @@
             this.pnlPQEmptyInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnlPQEmptyInfo.color = System.Drawing.Color.Transparent;
             this.pnlPQEmptyInfo.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.pnlPQEmptyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlPQEmptyInfo.Enabled = false;
             this.pnlPQEmptyInfo.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.pnlPQEmptyInfo.ForeColor = System.Drawing.Color.Black;
@@ -327,6 +331,7 @@
             this.pnlFIFOEmptyInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnlFIFOEmptyInfo.color = System.Drawing.Color.Transparent;
             this.pnlFIFOEmptyInfo.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.pnlFIFOEmptyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlFIFOEmptyInfo.Enabled = false;
             this.pnlFIFOEmptyInfo.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.pnlFIFOEmptyInfo.ForeColor = System.Drawing.Color.Black;
@@ -658,7 +663,7 @@
         private System.Windows.Forms.ColumnHeader numbOfCar;
         private System.Windows.Forms.ColumnHeader carImage;
         private System.Windows.Forms.ColumnHeader carPlate;
-        private System.Windows.Forms.ColumnHeader enterTime;
+        private System.Windows.Forms.ColumnHeader parkedTime;
         private System.Windows.Forms.ColumnHeader exitFIFOTime;
         private System.Windows.Forms.ColumnHeader exitPQTime;
     }

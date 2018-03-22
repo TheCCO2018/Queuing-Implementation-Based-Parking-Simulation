@@ -33,10 +33,6 @@ namespace AutoparkQueue
                             Node temp = last.Next;
                             last.Next = N;
                             N.Next = temp;
-                            while(last.Next != null)
-                            {
-
-                            }
                             break;
                         }
                         last = last.Next;

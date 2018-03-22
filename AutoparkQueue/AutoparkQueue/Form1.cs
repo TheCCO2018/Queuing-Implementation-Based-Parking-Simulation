@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
-using MaterialSkin.Animations;
-using MaterialSkin.Controls;
 
 namespace AutoparkQueue
 {
@@ -83,20 +75,34 @@ namespace AutoparkQueue
             Node Remove_FLL;
             Remove_PQL = _PQL.Remove();
             Remove_FLL = _FLL.Remove();
-
+            MessageBox.Show(Remove_FLL.Data.exitTime.ToString() + " - "+Remove_FLL.Data.parkedTime.ToString());
             if(Remove_PQL != null)
             {
                 int imageIndex = ilistPQ.Images.IndexOfKey(Remove_PQL.Data.id.ToString());
                 picPQLeavingCar.BackgroundImage = ilistPQ.Images[imageIndex];
                 lblPQLeavingCar.Text = "45 CCO " + Remove_PQL.Data.id + " has left the Priority Park.";
-
             }
-            if(Remove_FLL != null)
+            if (Remove_FLL != null)
             {
                 int imageIndex = ilistFIFO.Images.IndexOfKey(Remove_FLL.Data.id.ToString());
                 picFIFOLeavingCar.BackgroundImage = ilistFIFO.Images[imageIndex];
                 lblFIFOLeavingCarInfo.Text = "45 CCO " + Remove_FLL.Data.id + " has left the FIFO Park.";
+                ListViewItem Item = new ListViewItem(i.ToString());
+                mlvwTablesOfCars.Columns[i-1].ImageIndex = imageIndex;
+                Item.SubItems.Add("45 CCO " + Remove_FLL.Data.id);
+                Item.SubItems.Add(Remove_FLL.Data.exitTime.ToString());
+                //for (int j = 0; i < mlvwTablesOfCars.Items.Count; j++)
+                //{
+                //    if (mlvwTablesOfCars.Items[j].SubItems[2].Text == "45 CCO " + Remove_PQL.Data.id.ToString())
+                //    {
+                //        mlvwTablesOfCars.Items[j].SubItems[4].Text = Remove_FLL.Data.parkedTime.ToString();
+                //    }
+                //}
+                Item.SubItems.Add(Remove_FLL.Data.parkedTime.ToString());
+                mlvwTablesOfCars.Items.Add(Item);
+                i++;
             }
+            //Sen bak kanka birazcık düşün bakam
             Listele(_FLL);
             Listele(_PQL);
         }
@@ -105,13 +111,13 @@ namespace AutoparkQueue
         Random Rng = new Random();
         public void AracEkle()
         {
-            Car car;
+            Car pqlCar = new Car(Rng.Next(1, 15), Rng.Next(10, 300)) { id = index++ };
+            Car fllCar = new Car(pqlCar.carType, pqlCar.exitTime) { id = pqlCar.id };
             Node node_PQL;
             Node node_FLL;
-
-            car = new Car(Rng.Next(1, 15), Rng.Next(10, 300)){id = index++};
-            node_PQL = new Node(car, null);
-            node_FLL = new Node(car, null);
+            
+            node_PQL = new Node(pqlCar, null);
+            node_FLL = new Node(fllCar, null);
 
             _PQL.Insert(node_PQL);
             Node curNode_PQL = _PQL.front;
@@ -121,32 +127,32 @@ namespace AutoparkQueue
             }
             else
             {
-                ////for (int i = 0; i < _PQL.count; i++ )
-                //while (curNode_PQL.Next != node_PQL)
-                //{
-                //    node_PQL.Data.parkedTime += curNode_PQL.Data.exitTime;
-                //    curNode_PQL = curNode_PQL.Next;
-                //}
+                while (curNode_PQL != node_PQL)
+                {
+                    node_PQL.Data.parkedTime += curNode_PQL.Data.exitTime;
+                    //if(curNode_PQL != node_PQL && curNode_PQL.Next != null)
+                    curNode_PQL = curNode_PQL.Next;
+                }
+                node_PQL.Data.parkedTime += curNode_PQL.Data.exitTime;
             }
             if(node_PQL.Next != null)
             {
-                //curNode_PQL = node_PQL.Next;
-                //while (curNode_PQL.Next != null)
-                //{
-                //    curNode_PQL.Data.parkedTime += node_PQL.Data.exitTime;
-                //    curNode_PQL = curNode_PQL.Next;
-                //}
+                curNode_PQL = node_PQL.Next;
+                while (curNode_PQL.Next != null)
+                {
+                    curNode_PQL.Data.parkedTime += node_PQL.Data.exitTime;
+                    curNode_PQL = curNode_PQL.Next;
+                }
             }
             
             _FLL.Insert(node_FLL);
             Node curNode_FLL = _FLL.front;
-           // node_FLL.Data.parkedTime = node_FLL.Data.exitTime;
-            //while(curNode_FLL.Next != null)
-            //{
-            //    node_FLL.Data.parkedTime += curNode_FLL.Data.exitTime;
-                
-            //    curNode_FLL = curNode_FLL.Next;
-            //}
+            node_FLL.Data.parkedTime = node_FLL.Data.exitTime;
+            while(curNode_FLL != node_FLL)
+            {
+                node_FLL.Data.parkedTime += curNode_FLL.Data.exitTime;             
+                curNode_FLL = curNode_FLL.Next;
+            }
             ilistFIFO.Images.Add(node_FLL.Data.id.ToString(), Image.FromFile(node_FLL.Data.imageUrl));
             ilistPQ.Images.Add(node_PQL.Data.id.ToString(), Image.FromFile(node_PQL.Data.imageUrl));
         }

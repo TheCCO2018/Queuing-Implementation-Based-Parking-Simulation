@@ -1,0 +1,11 @@
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.Form_Screen.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Release\AutoparkQueue.exe.config
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Release\AutoparkQueue.exe
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Release\AutoparkQueue.pdb
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\bin\Release\MaterialSkin.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.exe
+C:\Users\User\Documents\Visual Studio 2013\Projects\Giris\oop\AfinTransformationEncrypt\Data_Structures_Project_1\AutoparkQueue\AutoparkQueue\obj\Release\AutoparkQueue.pdb
