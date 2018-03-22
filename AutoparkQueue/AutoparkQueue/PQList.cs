@@ -17,7 +17,7 @@ namespace AutoparkQueue
             }
             else
             {               
-                if(N.Data.exitTime < front.Data.exitTime)
+                if(N.Data.exitTime <= front.Data.exitTime)
                 {
                     Node temp = front;
                     front = N;
@@ -33,6 +33,10 @@ namespace AutoparkQueue
                             Node temp = last.Next;
                             last.Next = N;
                             N.Next = temp;
+                            while(last.Next != null)
+                            {
+
+                            }
                             break;
                         }
                         last = last.Next;
@@ -41,7 +45,7 @@ namespace AutoparkQueue
                     rear = N;
                 }             
             }
-            size++;
+            count++;
         }
     }
 }

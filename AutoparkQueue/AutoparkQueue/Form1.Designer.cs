@@ -1,6 +1,6 @@
 ﻿namespace AutoparkQueue
 {
-    partial class Form1
+    partial class Form_Screen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,256 +29,638 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.MainPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.topPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.exitBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Screen));
+            this.pnlWelcome = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblWelcomeContext7 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext6 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext5 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext4 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext3 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext2 = new System.Windows.Forms.Label();
+            this.lblWelcomeContext1 = new System.Windows.Forms.Label();
+            this.lblWelcomHead = new System.Windows.Forms.Label();
+            this.btnDevamEt = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pnlMainOperations = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
+            this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.enterTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlPQEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
+            this.pnlFIFOEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
+            this.lvwSimpleQueue = new System.Windows.Forms.ListView();
+            this.ilistFIFO = new System.Windows.Forms.ImageList(this.components);
+            this.btnRemoveCar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAddCar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnlInformations = new System.Windows.Forms.Panel();
+            this.picPQExitIcon = new System.Windows.Forms.PictureBox();
+            this.lblPQQueuedCar = new System.Windows.Forms.Label();
+            this.picPQQueuedCar = new System.Windows.Forms.PictureBox();
+            this.lblPQLeavingCar = new System.Windows.Forms.Label();
+            this.picPQLeavingCar = new System.Windows.Forms.PictureBox();
+            this.picPQInlinedIcon = new System.Windows.Forms.PictureBox();
+            this.picFIFOExitIcon = new System.Windows.Forms.PictureBox();
+            this.lblFIFOInlinedCarInfo = new System.Windows.Forms.Label();
+            this.picFIFOQueuedCar = new System.Windows.Forms.PictureBox();
+            this.lblFIFOLeavingCarInfo = new System.Windows.Forms.Label();
+            this.picFIFOLeavingCar = new System.Windows.Forms.PictureBox();
+            this.picFIFOInlinedIcon = new System.Windows.Forms.PictureBox();
+            this.lvwPriorityQueue = new System.Windows.Forms.ListView();
+            this.ilistPQ = new System.Windows.Forms.ImageList(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.pnlControl = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.SecondPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.btnAracEkle = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAracsil = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.MainPanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).BeginInit();
-            this.SecondPanel.SuspendLayout();
+            this.pnlWelcome.SuspendLayout();
+            this.pnlMainOperations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddCar)).BeginInit();
+            this.pnlInformations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQExitIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQQueuedCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQLeavingCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQInlinedIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOExitIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOQueuedCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOLeavingCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOInlinedIcon)).BeginInit();
+            this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
-            // MainPanel
+            // pnlWelcome
             // 
-            this.MainPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
-            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MainPanel.Controls.Add(this.bunifuThinButton21);
-            this.MainPanel.Controls.Add(this.bunifuCustomLabel2);
-            this.MainPanel.Controls.Add(this.bunifuCustomLabel1);
-            this.MainPanel.GradientBottomLeft = System.Drawing.Color.White;
-            this.MainPanel.GradientBottomRight = System.Drawing.Color.White;
-            this.MainPanel.GradientTopLeft = System.Drawing.Color.White;
-            this.MainPanel.GradientTopRight = System.Drawing.Color.White;
-            this.MainPanel.Location = new System.Drawing.Point(0, 40);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Quality = 10;
-            this.MainPanel.Size = new System.Drawing.Size(800, 460);
-            this.MainPanel.TabIndex = 0;
+            this.pnlWelcome.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlWelcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlWelcome.BackgroundImage")));
+            this.pnlWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext7);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext6);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext5);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext4);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext3);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext2);
+            this.pnlWelcome.Controls.Add(this.lblWelcomeContext1);
+            this.pnlWelcome.Controls.Add(this.lblWelcomHead);
+            this.pnlWelcome.Controls.Add(this.btnDevamEt);
+            this.pnlWelcome.GradientBottomLeft = System.Drawing.Color.White;
+            this.pnlWelcome.GradientBottomRight = System.Drawing.Color.White;
+            this.pnlWelcome.GradientTopLeft = System.Drawing.Color.White;
+            this.pnlWelcome.GradientTopRight = System.Drawing.Color.White;
+            this.pnlWelcome.Location = new System.Drawing.Point(0, 25);
+            this.pnlWelcome.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlWelcome.Name = "pnlWelcome";
+            this.pnlWelcome.Quality = 10;
+            this.pnlWelcome.Size = new System.Drawing.Size(800, 475);
+            this.pnlWelcome.TabIndex = 0;
             // 
-            // bunifuThinButton21
+            // lblWelcomeContext7
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Devam Et";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(605, 396);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton21.TabIndex = 2;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.lblWelcomeContext7.AutoSize = true;
+            this.lblWelcomeContext7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext7.Location = new System.Drawing.Point(59, 326);
+            this.lblWelcomeContext7.Name = "lblWelcomeContext7";
+            this.lblWelcomeContext7.Size = new System.Drawing.Size(684, 30);
+            this.lblWelcomeContext7.TabIndex = 10;
+            this.lblWelcomeContext7.Text = "gereğince bir Otopark alan adı altında somutlaştırılmıştır.";
             // 
-            // bunifuCustomLabel2
+            // lblWelcomeContext6
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(26, 115);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(744, 230);
-            this.bunifuCustomLabel2.TabIndex = 1;
-            this.bunifuCustomLabel2.Text = "Otopark Similasyon Sistemini\r\nkullanmak için Devam Et\r\n\r\nOnat Aktaş-Cengiz Cebeci" +
-    "-Canberk Ateş\r\n\r\n";
+            this.lblWelcomeContext6.AutoSize = true;
+            this.lblWelcomeContext6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext6.Location = new System.Drawing.Point(59, 287);
+            this.lblWelcomeContext6.Name = "lblWelcomeContext6";
+            this.lblWelcomeContext6.Size = new System.Drawing.Size(712, 30);
+            this.lblWelcomeContext6.TabIndex = 9;
+            this.lblWelcomeContext6.Text = "işlemlerini gerçekleştirecektir. Tüm bu işlemler ödev içeriği ";
             // 
-            // bunifuCustomLabel1
+            // lblWelcomeContext5
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 27);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(190, 39);
-            this.bunifuCustomLabel1.TabIndex = 0;
-            this.bunifuCustomLabel1.Text = "Hoşgeldin !";
+            this.lblWelcomeContext5.AutoSize = true;
+            this.lblWelcomeContext5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext5.Location = new System.Drawing.Point(59, 248);
+            this.lblWelcomeContext5.Name = "lblWelcomeContext5";
+            this.lblWelcomeContext5.Size = new System.Drawing.Size(734, 30);
+            this.lblWelcomeContext5.TabIndex = 8;
+            this.lblWelcomeContext5.Text = "gerçekleştirilince kuyruktan ayrılma sürelerinin karşılaştırılması";
             // 
-            // topPanel
+            // lblWelcomeContext4
             // 
-            this.topPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.topPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topPanel.BackgroundImage")));
-            this.topPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.topPanel.Controls.Add(this.exitBtn);
-            this.topPanel.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
-            this.topPanel.GradientBottomRight = System.Drawing.Color.DodgerBlue;
-            this.topPanel.GradientTopLeft = System.Drawing.Color.DodgerBlue;
-            this.topPanel.GradientTopRight = System.Drawing.Color.DodgerBlue;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Quality = 10;
-            this.topPanel.Size = new System.Drawing.Size(800, 40);
-            this.topPanel.TabIndex = 1;
+            this.lblWelcomeContext4.AutoSize = true;
+            this.lblWelcomeContext4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext4.Location = new System.Drawing.Point(59, 210);
+            this.lblWelcomeContext4.Name = "lblWelcomeContext4";
+            this.lblWelcomeContext4.Size = new System.Drawing.Size(694, 30);
+            this.lblWelcomeContext4.TabIndex = 7;
+            this.lblWelcomeContext4.Text = "yapısında tutulan aynı verilerin kuyruktan ayrılma işlemleri";
             // 
-            // exitBtn
+            // lblWelcomeContext3
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.ImageActive = null;
-            this.exitBtn.Location = new System.Drawing.Point(757, 3);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(40, 34);
-            this.exitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exitBtn.TabIndex = 0;
-            this.exitBtn.TabStop = false;
-            this.exitBtn.Zoom = 10;
-            this.exitBtn.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.lblWelcomeContext3.AutoSize = true;
+            this.lblWelcomeContext3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext3.Location = new System.Drawing.Point(59, 173);
+            this.lblWelcomeContext3.Name = "lblWelcomeContext3";
+            this.lblWelcomeContext3.Size = new System.Drawing.Size(670, 30);
+            this.lblWelcomeContext3.TabIndex = 6;
+            this.lblWelcomeContext3.Text = "Bu program basit bir kuyruk yapısı ile öncelikli bir kuyruk ";
+            // 
+            // lblWelcomeContext2
+            // 
+            this.lblWelcomeContext2.AutoSize = true;
+            this.lblWelcomeContext2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext2.Location = new System.Drawing.Point(59, 136);
+            this.lblWelcomeContext2.Name = "lblWelcomeContext2";
+            this.lblWelcomeContext2.Size = new System.Drawing.Size(664, 30);
+            this.lblWelcomeContext2.TabIndex = 5;
+            this.lblWelcomeContext2.Text = "Cengiz CEBECİ ve Onat AKTAŞ tarafından geliştirilmiştir.";
+            // 
+            // lblWelcomeContext1
+            // 
+            this.lblWelcomeContext1.AutoSize = true;
+            this.lblWelcomeContext1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomeContext1.Location = new System.Drawing.Point(81, 98);
+            this.lblWelcomeContext1.Name = "lblWelcomeContext1";
+            this.lblWelcomeContext1.Size = new System.Drawing.Size(593, 30);
+            this.lblWelcomeContext1.TabIndex = 4;
+            this.lblWelcomeContext1.Text = "Bu program, Veri Yapıları dersi için Canberk Ateş,";
+            // 
+            // lblWelcomHead
+            // 
+            this.lblWelcomHead.AutoSize = true;
+            this.lblWelcomHead.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcomHead.Location = new System.Drawing.Point(58, 43);
+            this.lblWelcomHead.Name = "lblWelcomHead";
+            this.lblWelcomHead.Size = new System.Drawing.Size(170, 33);
+            this.lblWelcomHead.TabIndex = 3;
+            this.lblWelcomHead.Text = "Hoşgeldiniz!";
+            // 
+            // btnDevamEt
+            // 
+            this.btnDevamEt.ActiveBorderThickness = 1;
+            this.btnDevamEt.ActiveCornerRadius = 20;
+            this.btnDevamEt.ActiveFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDevamEt.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDevamEt.ActiveLineColor = System.Drawing.Color.DodgerBlue;
+            this.btnDevamEt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDevamEt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDevamEt.BackgroundImage")));
+            this.btnDevamEt.ButtonText = "Devam Et";
+            this.btnDevamEt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevamEt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnDevamEt.IdleBorderThickness = 1;
+            this.btnDevamEt.IdleCornerRadius = 20;
+            this.btnDevamEt.IdleFillColor = System.Drawing.Color.White;
+            this.btnDevamEt.IdleForecolor = System.Drawing.Color.DodgerBlue;
+            this.btnDevamEt.IdleLineColor = System.Drawing.Color.DodgerBlue;
+            this.btnDevamEt.Location = new System.Drawing.Point(641, 373);
+            this.btnDevamEt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDevamEt.Name = "btnDevamEt";
+            this.btnDevamEt.Size = new System.Drawing.Size(146, 50);
+            this.btnDevamEt.TabIndex = 2;
+            this.btnDevamEt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDevamEt.Click += new System.EventHandler(this.btnDevamEt_Click);
+            // 
+            // pnlMainOperations
+            // 
+            this.pnlMainOperations.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMainOperations.BackgroundImage")));
+            this.pnlMainOperations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMainOperations.Controls.Add(this.mlvwTablesOfCars);
+            this.pnlMainOperations.Controls.Add(this.pnlPQEmptyInfo);
+            this.pnlMainOperations.Controls.Add(this.pnlFIFOEmptyInfo);
+            this.pnlMainOperations.Controls.Add(this.lvwSimpleQueue);
+            this.pnlMainOperations.Controls.Add(this.btnRemoveCar);
+            this.pnlMainOperations.Controls.Add(this.btnAddCar);
+            this.pnlMainOperations.Controls.Add(this.pnlInformations);
+            this.pnlMainOperations.Controls.Add(this.lvwPriorityQueue);
+            this.pnlMainOperations.GradientBottomLeft = System.Drawing.Color.White;
+            this.pnlMainOperations.GradientBottomRight = System.Drawing.Color.White;
+            this.pnlMainOperations.GradientTopLeft = System.Drawing.Color.White;
+            this.pnlMainOperations.GradientTopRight = System.Drawing.Color.White;
+            this.pnlMainOperations.Location = new System.Drawing.Point(0, 25);
+            this.pnlMainOperations.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainOperations.Name = "pnlMainOperations";
+            this.pnlMainOperations.Quality = 10;
+            this.pnlMainOperations.Size = new System.Drawing.Size(800, 475);
+            this.pnlMainOperations.TabIndex = 2;
+            // 
+            // mlvwTablesOfCars
+            // 
+            this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numbOfCar,
+            this.carImage,
+            this.carPlate,
+            this.enterTime,
+            this.exitFIFOTime,
+            this.exitPQTime});
+            this.mlvwTablesOfCars.Depth = 0;
+            this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.mlvwTablesOfCars.Location = new System.Drawing.Point(10, 320);
+            this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
+            this.mlvwTablesOfCars.OwnerDraw = true;
+            this.mlvwTablesOfCars.Size = new System.Drawing.Size(780, 150);
+            this.mlvwTablesOfCars.TabIndex = 41;
+            this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
+            this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
+            // 
+            // numbOfCar
+            // 
+            this.numbOfCar.Text = "#";
+            this.numbOfCar.Width = 35;
+            // 
+            // carImage
+            // 
+            this.carImage.Text = "Car";
+            this.carImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.carImage.Width = 45;
+            // 
+            // carPlate
+            // 
+            this.carPlate.Text = "Plate";
+            this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.carPlate.Width = 100;
+            // 
+            // enterTime
+            // 
+            this.enterTime.Text = "Enter Time";
+            this.enterTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.enterTime.Width = 200;
+            // 
+            // exitFIFOTime
+            // 
+            this.exitFIFOTime.Text = "Exit From FIFO";
+            this.exitFIFOTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitFIFOTime.Width = 200;
+            // 
+            // exitPQTime
+            // 
+            this.exitPQTime.Text = "Exit From PQ";
+            this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitPQTime.Width = 190;
+            // 
+            // pnlPQEmptyInfo
+            // 
+            this.pnlPQEmptyInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPQEmptyInfo.color = System.Drawing.Color.Transparent;
+            this.pnlPQEmptyInfo.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.pnlPQEmptyInfo.Enabled = false;
+            this.pnlPQEmptyInfo.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.pnlPQEmptyInfo.ForeColor = System.Drawing.Color.Black;
+            this.pnlPQEmptyInfo.Image = ((System.Drawing.Image)(resources.GetObject("pnlPQEmptyInfo.Image")));
+            this.pnlPQEmptyInfo.ImagePosition = 20;
+            this.pnlPQEmptyInfo.ImageZoom = 20;
+            this.pnlPQEmptyInfo.LabelPosition = 41;
+            this.pnlPQEmptyInfo.LabelText = "The Autopark has no cars";
+            this.pnlPQEmptyInfo.Location = new System.Drawing.Point(420, 37);
+            this.pnlPQEmptyInfo.Margin = new System.Windows.Forms.Padding(6);
+            this.pnlPQEmptyInfo.Name = "pnlPQEmptyInfo";
+            this.pnlPQEmptyInfo.Size = new System.Drawing.Size(370, 150);
+            this.pnlPQEmptyInfo.TabIndex = 40;
+            // 
+            // pnlFIFOEmptyInfo
+            // 
+            this.pnlFIFOEmptyInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFIFOEmptyInfo.color = System.Drawing.Color.Transparent;
+            this.pnlFIFOEmptyInfo.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.pnlFIFOEmptyInfo.Enabled = false;
+            this.pnlFIFOEmptyInfo.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.pnlFIFOEmptyInfo.ForeColor = System.Drawing.Color.Black;
+            this.pnlFIFOEmptyInfo.Image = ((System.Drawing.Image)(resources.GetObject("pnlFIFOEmptyInfo.Image")));
+            this.pnlFIFOEmptyInfo.ImagePosition = 20;
+            this.pnlFIFOEmptyInfo.ImageZoom = 20;
+            this.pnlFIFOEmptyInfo.LabelPosition = 41;
+            this.pnlFIFOEmptyInfo.LabelText = "The Autopark has no cars";
+            this.pnlFIFOEmptyInfo.Location = new System.Drawing.Point(10, 37);
+            this.pnlFIFOEmptyInfo.Margin = new System.Windows.Forms.Padding(6);
+            this.pnlFIFOEmptyInfo.Name = "pnlFIFOEmptyInfo";
+            this.pnlFIFOEmptyInfo.Size = new System.Drawing.Size(370, 150);
+            this.pnlFIFOEmptyInfo.TabIndex = 1;
+            // 
+            // lvwSimpleQueue
+            // 
+            this.lvwSimpleQueue.LargeImageList = this.ilistFIFO;
+            this.lvwSimpleQueue.Location = new System.Drawing.Point(10, 37);
+            this.lvwSimpleQueue.Margin = new System.Windows.Forms.Padding(0);
+            this.lvwSimpleQueue.Name = "lvwSimpleQueue";
+            this.lvwSimpleQueue.Size = new System.Drawing.Size(370, 150);
+            this.lvwSimpleQueue.TabIndex = 0;
+            this.lvwSimpleQueue.UseCompatibleStateImageBehavior = false;
+            // 
+            // ilistFIFO
+            // 
+            this.ilistFIFO.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ilistFIFO.ImageSize = new System.Drawing.Size(40, 40);
+            this.ilistFIFO.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // btnRemoveCar
+            // 
+            this.btnRemoveCar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveCar.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveCar.Image")));
+            this.btnRemoveCar.ImageActive = null;
+            this.btnRemoveCar.Location = new System.Drawing.Point(383, 111);
+            this.btnRemoveCar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRemoveCar.Name = "btnRemoveCar";
+            this.btnRemoveCar.Size = new System.Drawing.Size(35, 35);
+            this.btnRemoveCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRemoveCar.TabIndex = 38;
+            this.btnRemoveCar.TabStop = false;
+            this.btnRemoveCar.Zoom = 10;
+            this.btnRemoveCar.Click += new System.EventHandler(this.btnAracsil_Click);
+            // 
+            // btnAddCar
+            // 
+            this.btnAddCar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCar.Image")));
+            this.btnAddCar.ImageActive = null;
+            this.btnAddCar.Location = new System.Drawing.Point(383, 70);
+            this.btnAddCar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddCar.Name = "btnAddCar";
+            this.btnAddCar.Size = new System.Drawing.Size(35, 35);
+            this.btnAddCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAddCar.TabIndex = 37;
+            this.btnAddCar.TabStop = false;
+            this.btnAddCar.Zoom = 10;
+            this.btnAddCar.Click += new System.EventHandler(this.btnAracEkle_Click);
+            // 
+            // pnlInformations
+            // 
+            this.pnlInformations.BackColor = System.Drawing.Color.Transparent;
+            this.pnlInformations.Controls.Add(this.picPQExitIcon);
+            this.pnlInformations.Controls.Add(this.lblPQQueuedCar);
+            this.pnlInformations.Controls.Add(this.picPQQueuedCar);
+            this.pnlInformations.Controls.Add(this.lblPQLeavingCar);
+            this.pnlInformations.Controls.Add(this.picPQLeavingCar);
+            this.pnlInformations.Controls.Add(this.picPQInlinedIcon);
+            this.pnlInformations.Controls.Add(this.picFIFOExitIcon);
+            this.pnlInformations.Controls.Add(this.lblFIFOInlinedCarInfo);
+            this.pnlInformations.Controls.Add(this.picFIFOQueuedCar);
+            this.pnlInformations.Controls.Add(this.lblFIFOLeavingCarInfo);
+            this.pnlInformations.Controls.Add(this.picFIFOLeavingCar);
+            this.pnlInformations.Controls.Add(this.picFIFOInlinedIcon);
+            this.pnlInformations.Location = new System.Drawing.Point(10, 191);
+            this.pnlInformations.Name = "pnlInformations";
+            this.pnlInformations.Size = new System.Drawing.Size(780, 92);
+            this.pnlInformations.TabIndex = 36;
+            this.pnlInformations.Visible = false;
+            // 
+            // picPQExitIcon
+            // 
+            this.picPQExitIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picPQExitIcon.Image = ((System.Drawing.Image)(resources.GetObject("picPQExitIcon.Image")));
+            this.picPQExitIcon.Location = new System.Drawing.Point(410, 1);
+            this.picPQExitIcon.Name = "picPQExitIcon";
+            this.picPQExitIcon.Size = new System.Drawing.Size(40, 40);
+            this.picPQExitIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPQExitIcon.TabIndex = 37;
+            this.picPQExitIcon.TabStop = false;
+            // 
+            // lblPQQueuedCar
+            // 
+            this.lblPQQueuedCar.AutoSize = true;
+            this.lblPQQueuedCar.BackColor = System.Drawing.Color.Transparent;
+            this.lblPQQueuedCar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPQQueuedCar.Location = new System.Drawing.Point(502, 59);
+            this.lblPQQueuedCar.Name = "lblPQQueuedCar";
+            this.lblPQQueuedCar.Size = new System.Drawing.Size(0, 21);
+            this.lblPQQueuedCar.TabIndex = 40;
+            // 
+            // picPQQueuedCar
+            // 
+            this.picPQQueuedCar.BackColor = System.Drawing.Color.Transparent;
+            this.picPQQueuedCar.Location = new System.Drawing.Point(456, 47);
+            this.picPQQueuedCar.Name = "picPQQueuedCar";
+            this.picPQQueuedCar.Size = new System.Drawing.Size(40, 40);
+            this.picPQQueuedCar.TabIndex = 35;
+            this.picPQQueuedCar.TabStop = false;
+            // 
+            // lblPQLeavingCar
+            // 
+            this.lblPQLeavingCar.AutoSize = true;
+            this.lblPQLeavingCar.BackColor = System.Drawing.Color.Transparent;
+            this.lblPQLeavingCar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPQLeavingCar.Location = new System.Drawing.Point(502, 13);
+            this.lblPQLeavingCar.Name = "lblPQLeavingCar";
+            this.lblPQLeavingCar.Size = new System.Drawing.Size(0, 21);
+            this.lblPQLeavingCar.TabIndex = 39;
+            // 
+            // picPQLeavingCar
+            // 
+            this.picPQLeavingCar.BackColor = System.Drawing.Color.Transparent;
+            this.picPQLeavingCar.Location = new System.Drawing.Point(456, 1);
+            this.picPQLeavingCar.Name = "picPQLeavingCar";
+            this.picPQLeavingCar.Size = new System.Drawing.Size(40, 40);
+            this.picPQLeavingCar.TabIndex = 36;
+            this.picPQLeavingCar.TabStop = false;
+            // 
+            // picPQInlinedIcon
+            // 
+            this.picPQInlinedIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picPQInlinedIcon.Image = ((System.Drawing.Image)(resources.GetObject("picPQInlinedIcon.Image")));
+            this.picPQInlinedIcon.Location = new System.Drawing.Point(410, 47);
+            this.picPQInlinedIcon.Name = "picPQInlinedIcon";
+            this.picPQInlinedIcon.Size = new System.Drawing.Size(40, 40);
+            this.picPQInlinedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPQInlinedIcon.TabIndex = 38;
+            this.picPQInlinedIcon.TabStop = false;
+            // 
+            // picFIFOExitIcon
+            // 
+            this.picFIFOExitIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picFIFOExitIcon.Image = ((System.Drawing.Image)(resources.GetObject("picFIFOExitIcon.Image")));
+            this.picFIFOExitIcon.Location = new System.Drawing.Point(0, 3);
+            this.picFIFOExitIcon.Name = "picFIFOExitIcon";
+            this.picFIFOExitIcon.Size = new System.Drawing.Size(40, 40);
+            this.picFIFOExitIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFIFOExitIcon.TabIndex = 31;
+            this.picFIFOExitIcon.TabStop = false;
+            // 
+            // lblFIFOInlinedCarInfo
+            // 
+            this.lblFIFOInlinedCarInfo.AutoSize = true;
+            this.lblFIFOInlinedCarInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblFIFOInlinedCarInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFIFOInlinedCarInfo.Location = new System.Drawing.Point(92, 61);
+            this.lblFIFOInlinedCarInfo.Name = "lblFIFOInlinedCarInfo";
+            this.lblFIFOInlinedCarInfo.Size = new System.Drawing.Size(0, 21);
+            this.lblFIFOInlinedCarInfo.TabIndex = 34;
+            // 
+            // picFIFOQueuedCar
+            // 
+            this.picFIFOQueuedCar.BackColor = System.Drawing.Color.Transparent;
+            this.picFIFOQueuedCar.Location = new System.Drawing.Point(46, 49);
+            this.picFIFOQueuedCar.Name = "picFIFOQueuedCar";
+            this.picFIFOQueuedCar.Size = new System.Drawing.Size(40, 40);
+            this.picFIFOQueuedCar.TabIndex = 29;
+            this.picFIFOQueuedCar.TabStop = false;
+            // 
+            // lblFIFOLeavingCarInfo
+            // 
+            this.lblFIFOLeavingCarInfo.AutoSize = true;
+            this.lblFIFOLeavingCarInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblFIFOLeavingCarInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFIFOLeavingCarInfo.Location = new System.Drawing.Point(92, 15);
+            this.lblFIFOLeavingCarInfo.Name = "lblFIFOLeavingCarInfo";
+            this.lblFIFOLeavingCarInfo.Size = new System.Drawing.Size(0, 21);
+            this.lblFIFOLeavingCarInfo.TabIndex = 33;
+            // 
+            // picFIFOLeavingCar
+            // 
+            this.picFIFOLeavingCar.BackColor = System.Drawing.Color.Transparent;
+            this.picFIFOLeavingCar.Location = new System.Drawing.Point(46, 3);
+            this.picFIFOLeavingCar.Name = "picFIFOLeavingCar";
+            this.picFIFOLeavingCar.Size = new System.Drawing.Size(40, 40);
+            this.picFIFOLeavingCar.TabIndex = 30;
+            this.picFIFOLeavingCar.TabStop = false;
+            // 
+            // picFIFOInlinedIcon
+            // 
+            this.picFIFOInlinedIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picFIFOInlinedIcon.Image = ((System.Drawing.Image)(resources.GetObject("picFIFOInlinedIcon.Image")));
+            this.picFIFOInlinedIcon.Location = new System.Drawing.Point(0, 49);
+            this.picFIFOInlinedIcon.Name = "picFIFOInlinedIcon";
+            this.picFIFOInlinedIcon.Size = new System.Drawing.Size(40, 40);
+            this.picFIFOInlinedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFIFOInlinedIcon.TabIndex = 32;
+            this.picFIFOInlinedIcon.TabStop = false;
+            // 
+            // lvwPriorityQueue
+            // 
+            this.lvwPriorityQueue.LargeImageList = this.ilistPQ;
+            this.lvwPriorityQueue.Location = new System.Drawing.Point(420, 37);
+            this.lvwPriorityQueue.Margin = new System.Windows.Forms.Padding(0);
+            this.lvwPriorityQueue.Name = "lvwPriorityQueue";
+            this.lvwPriorityQueue.Size = new System.Drawing.Size(370, 150);
+            this.lvwPriorityQueue.TabIndex = 1;
+            this.lvwPriorityQueue.UseCompatibleStateImageBehavior = false;
+            // 
+            // ilistPQ
+            // 
+            this.ilistPQ.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ilistPQ.ImageSize = new System.Drawing.Size(40, 40);
+            this.ilistPQ.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.topPanel;
+            this.bunifuDragControl1.TargetControl = this;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // pnlControl
+            // 
+            this.pnlControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlControl.BackgroundImage")));
+            this.pnlControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlControl.Controls.Add(this.btnExit);
+            this.pnlControl.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
+            this.pnlControl.GradientBottomRight = System.Drawing.Color.DodgerBlue;
+            this.pnlControl.GradientTopLeft = System.Drawing.Color.DodgerBlue;
+            this.pnlControl.GradientTopRight = System.Drawing.Color.DodgerBlue;
+            this.pnlControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Quality = 10;
+            this.pnlControl.Size = new System.Drawing.Size(800, 25);
+            this.pnlControl.TabIndex = 4;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageActive = null;
+            this.btnExit.Location = new System.Drawing.Point(774, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(23, 23);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 0;
+            this.btnExit.TabStop = false;
+            this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // SecondPanel
+            // Form_Screen
             // 
-            this.SecondPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SecondPanel.BackgroundImage")));
-            this.SecondPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SecondPanel.Controls.Add(this.btnAracsil);
-            this.SecondPanel.Controls.Add(this.btnAracEkle);
-            this.SecondPanel.Controls.Add(this.listView2);
-            this.SecondPanel.Controls.Add(this.listView1);
-            this.SecondPanel.GradientBottomLeft = System.Drawing.Color.White;
-            this.SecondPanel.GradientBottomRight = System.Drawing.Color.White;
-            this.SecondPanel.GradientTopLeft = System.Drawing.Color.White;
-            this.SecondPanel.GradientTopRight = System.Drawing.Color.White;
-            this.SecondPanel.Location = new System.Drawing.Point(0, 40);
-            this.SecondPanel.Name = "SecondPanel";
-            this.SecondPanel.Quality = 10;
-            this.SecondPanel.Size = new System.Drawing.Size(800, 460);
-            this.SecondPanel.TabIndex = 2;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(464, 27);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(324, 174);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(12, 27);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(324, 174);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnAracEkle
-            // 
-            this.btnAracEkle.ActiveBorderThickness = 1;
-            this.btnAracEkle.ActiveCornerRadius = 20;
-            this.btnAracEkle.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracEkle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAracEkle.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAracEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAracEkle.BackgroundImage")));
-            this.btnAracEkle.ButtonText = "Araç Ekle";
-            this.btnAracEkle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAracEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAracEkle.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracEkle.IdleBorderThickness = 1;
-            this.btnAracEkle.IdleCornerRadius = 20;
-            this.btnAracEkle.IdleFillColor = System.Drawing.Color.White;
-            this.btnAracEkle.IdleForecolor = System.Drawing.Color.DodgerBlue;
-            this.btnAracEkle.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracEkle.Location = new System.Drawing.Point(310, 209);
-            this.btnAracEkle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAracEkle.Name = "btnAracEkle";
-            this.btnAracEkle.Size = new System.Drawing.Size(181, 41);
-            this.btnAracEkle.TabIndex = 2;
-            this.btnAracEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAracEkle.Click += new System.EventHandler(this.btnAracEkle_Click);
-            // 
-            // btnAracsil
-            // 
-            this.btnAracsil.ActiveBorderThickness = 1;
-            this.btnAracsil.ActiveCornerRadius = 20;
-            this.btnAracsil.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracsil.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAracsil.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracsil.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAracsil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAracsil.BackgroundImage")));
-            this.btnAracsil.ButtonText = "Araç Sil";
-            this.btnAracsil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAracsil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAracsil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracsil.IdleBorderThickness = 1;
-            this.btnAracsil.IdleCornerRadius = 20;
-            this.btnAracsil.IdleFillColor = System.Drawing.Color.White;
-            this.btnAracsil.IdleForecolor = System.Drawing.Color.DodgerBlue;
-            this.btnAracsil.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.btnAracsil.Location = new System.Drawing.Point(310, 260);
-            this.btnAracsil.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAracsil.Name = "btnAracsil";
-            this.btnAracsil.Size = new System.Drawing.Size(181, 41);
-            this.btnAracsil.TabIndex = 3;
-            this.btnAracsil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAracsil.Click += new System.EventHandler(this.btnAracsil_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.topPanel);
-            this.Controls.Add(this.SecondPanel);
-            this.Controls.Add(this.MainPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "C";
+            this.Controls.Add(this.pnlControl);
+            this.Controls.Add(this.pnlMainOperations);
+            this.Controls.Add(this.pnlWelcome);
+            this.Name = "Form_Screen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.MainPanel.ResumeLayout(false);
-            this.MainPanel.PerformLayout();
-            this.topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).EndInit();
-            this.SecondPanel.ResumeLayout(false);
+            this.pnlWelcome.ResumeLayout(false);
+            this.pnlWelcome.PerformLayout();
+            this.pnlMainOperations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddCar)).EndInit();
+            this.pnlInformations.ResumeLayout(false);
+            this.pnlInformations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQExitIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQQueuedCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQLeavingCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPQInlinedIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOExitIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOQueuedCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOLeavingCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFIFOInlinedIcon)).EndInit();
+            this.pnlControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuGradientPanel MainPanel;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnlWelcome;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDevamEt;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnlMainOperations;
+        private System.Windows.Forms.ListView lvwPriorityQueue;
+        private System.Windows.Forms.ListView lvwSimpleQueue;
+        private System.Windows.Forms.Label lblWelcomHead;
+        private System.Windows.Forms.Label lblWelcomeContext7;
+        private System.Windows.Forms.Label lblWelcomeContext6;
+        private System.Windows.Forms.Label lblWelcomeContext5;
+        private System.Windows.Forms.Label lblWelcomeContext4;
+        private System.Windows.Forms.Label lblWelcomeContext3;
+        private System.Windows.Forms.Label lblWelcomeContext2;
+        private System.Windows.Forms.Label lblWelcomeContext1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnlControl;
+        private Bunifu.Framework.UI.BunifuImageButton btnExit;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuGradientPanel topPanel;
-        private Bunifu.Framework.UI.BunifuImageButton exitBtn;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuGradientPanel SecondPanel;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAracEkle;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAracsil;
+        private System.Windows.Forms.ImageList ilistFIFO;
+        private System.Windows.Forms.ImageList ilistPQ;
+        private System.Windows.Forms.Panel pnlInformations;
+        private System.Windows.Forms.PictureBox picPQExitIcon;
+        private System.Windows.Forms.Label lblPQQueuedCar;
+        private System.Windows.Forms.PictureBox picPQQueuedCar;
+        private System.Windows.Forms.Label lblPQLeavingCar;
+        private System.Windows.Forms.PictureBox picPQLeavingCar;
+        private System.Windows.Forms.PictureBox picPQInlinedIcon;
+        private System.Windows.Forms.PictureBox picFIFOExitIcon;
+        private System.Windows.Forms.Label lblFIFOInlinedCarInfo;
+        private System.Windows.Forms.PictureBox picFIFOQueuedCar;
+        private System.Windows.Forms.Label lblFIFOLeavingCarInfo;
+        private System.Windows.Forms.PictureBox picFIFOLeavingCar;
+        private System.Windows.Forms.PictureBox picFIFOInlinedIcon;
+        private Bunifu.Framework.UI.BunifuImageButton btnRemoveCar;
+        private Bunifu.Framework.UI.BunifuImageButton btnAddCar;
+        private Bunifu.Framework.UI.BunifuTileButton pnlPQEmptyInfo;
+        private Bunifu.Framework.UI.BunifuTileButton pnlFIFOEmptyInfo;
+        private MaterialSkin.Controls.MaterialListView mlvwTablesOfCars;
+        private System.Windows.Forms.ColumnHeader numbOfCar;
+        private System.Windows.Forms.ColumnHeader carImage;
+        private System.Windows.Forms.ColumnHeader carPlate;
+        private System.Windows.Forms.ColumnHeader enterTime;
+        private System.Windows.Forms.ColumnHeader exitFIFOTime;
+        private System.Windows.Forms.ColumnHeader exitPQTime;
     }
 }
 

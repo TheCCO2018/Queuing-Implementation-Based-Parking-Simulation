@@ -11,16 +11,14 @@ namespace AutoparkQueue
     {
         public string imageUrl { get; set; }
         public int carType { get; set; }
-        public int parkTime { get; set; }
+        public int id { get; set; }
+        public int parkedTime { get; set; }
         public int exitTime { get; set; }
 
         public Car(int carType, int exitTime)
         {
-            // TODO - add imageUrls with carType 
-            imageUrl = "";
             this.carType = carType;
             this.exitTime = exitTime;
-            this.parkTime = 0;
             this.imageUrl = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\assets\img\cars\car-" + carType + ".png");
         }
 

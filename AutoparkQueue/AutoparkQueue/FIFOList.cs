@@ -26,7 +26,7 @@ namespace AutoparkQueue
                 last.Next = N;
                 rear = N;
             }
-            size++;
+            count++;
 
         }
 

@@ -11,11 +11,11 @@ namespace AutoparkQueue
         public Node front;
 
         public Node rear;
-        public int size { get; set; }
+        public int count { get; set; }
 
         public Node Remove()
         {
-            if (size == 0)
+            if (count == 0)
             {
                 return null;
             }
@@ -23,7 +23,7 @@ namespace AutoparkQueue
             {
                 Node temp = front;
                 front = temp.Next;
-                size--;
+                count--;
                 return temp;
             }
         }
@@ -35,7 +35,7 @@ namespace AutoparkQueue
 
         public bool isEmpty()
         {
-            if (size != 0)
+            if (count != 0)
             {
                 return false;
             }
