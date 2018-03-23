@@ -43,11 +43,11 @@
             this.pnlMainOperations = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
             this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.carImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ilistResult = new System.Windows.Forms.ImageList(this.components);
             this.pnlPQEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnlFIFOEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
             this.lvwSimpleQueue = new System.Windows.Forms.ListView();
@@ -246,27 +246,30 @@
             // 
             // mlvwTablesOfCars
             // 
+            this.mlvwTablesOfCars.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.numbOfCar,
-            this.carImage,
             this.carPlate,
             this.parkedTime,
             this.exitFIFOTime,
             this.exitPQTime});
             this.mlvwTablesOfCars.Depth = 0;
+            this.mlvwTablesOfCars.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.White;
             this.mlvwTablesOfCars.FullRowSelect = true;
             this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mlvwTablesOfCars.HoverSelection = true;
             this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.mlvwTablesOfCars.LargeImageList = this.ilistFIFO;
-            this.mlvwTablesOfCars.Location = new System.Drawing.Point(10, 320);
+            this.mlvwTablesOfCars.Location = new System.Drawing.Point(0, 294);
+            this.mlvwTablesOfCars.Margin = new System.Windows.Forms.Padding(0);
             this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
             this.mlvwTablesOfCars.OwnerDraw = true;
-            this.mlvwTablesOfCars.Size = new System.Drawing.Size(780, 150);
+            this.mlvwTablesOfCars.Size = new System.Drawing.Size(800, 181);
+            this.mlvwTablesOfCars.SmallImageList = this.ilistResult;
             this.mlvwTablesOfCars.TabIndex = 41;
             this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
             this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
@@ -274,25 +277,19 @@
             // numbOfCar
             // 
             this.numbOfCar.Text = "#";
-            this.numbOfCar.Width = 35;
-            // 
-            // carImage
-            // 
-            this.carImage.Text = "Car";
-            this.carImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.carImage.Width = 45;
+            this.numbOfCar.Width = 40;
             // 
             // carPlate
             // 
             this.carPlate.Text = "Plate";
             this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.carPlate.Width = 100;
+            this.carPlate.Width = 140;
             // 
             // parkedTime
             // 
             this.parkedTime.Text = "Parked Time";
             this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.parkedTime.Width = 200;
+            this.parkedTime.Width = 215;
             // 
             // exitFIFOTime
             // 
@@ -304,7 +301,27 @@
             // 
             this.exitPQTime.Text = "Exit From PQ";
             this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exitPQTime.Width = 190;
+            this.exitPQTime.Width = 205;
+            // 
+            // ilistResult
+            // 
+            this.ilistResult.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilistResult.ImageStream")));
+            this.ilistResult.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilistResult.Images.SetKeyName(0, "car-0.png");
+            this.ilistResult.Images.SetKeyName(1, "car-1.png");
+            this.ilistResult.Images.SetKeyName(2, "car-2.png");
+            this.ilistResult.Images.SetKeyName(3, "Car-3.png");
+            this.ilistResult.Images.SetKeyName(4, "car-4.png");
+            this.ilistResult.Images.SetKeyName(5, "car-5.png");
+            this.ilistResult.Images.SetKeyName(6, "car-6.png");
+            this.ilistResult.Images.SetKeyName(7, "car-7.png");
+            this.ilistResult.Images.SetKeyName(8, "car-8.png");
+            this.ilistResult.Images.SetKeyName(9, "car-9.png");
+            this.ilistResult.Images.SetKeyName(10, "car-10.png");
+            this.ilistResult.Images.SetKeyName(11, "car-11.png");
+            this.ilistResult.Images.SetKeyName(12, "car-12.png");
+            this.ilistResult.Images.SetKeyName(13, "car-13.png");
+            this.ilistResult.Images.SetKeyName(14, "car-14.png");
             // 
             // pnlPQEmptyInfo
             // 
@@ -429,6 +446,7 @@
             this.lblPQQueuedCar.AutoSize = true;
             this.lblPQQueuedCar.BackColor = System.Drawing.Color.Transparent;
             this.lblPQQueuedCar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPQQueuedCar.ForeColor = System.Drawing.Color.SeaGreen;
             this.lblPQQueuedCar.Location = new System.Drawing.Point(502, 59);
             this.lblPQQueuedCar.Name = "lblPQQueuedCar";
             this.lblPQQueuedCar.Size = new System.Drawing.Size(0, 21);
@@ -448,6 +466,7 @@
             this.lblPQLeavingCar.AutoSize = true;
             this.lblPQLeavingCar.BackColor = System.Drawing.Color.Transparent;
             this.lblPQLeavingCar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPQLeavingCar.ForeColor = System.Drawing.Color.Red;
             this.lblPQLeavingCar.Location = new System.Drawing.Point(502, 13);
             this.lblPQLeavingCar.Name = "lblPQLeavingCar";
             this.lblPQLeavingCar.Size = new System.Drawing.Size(0, 21);
@@ -489,6 +508,7 @@
             this.lblFIFOInlinedCarInfo.AutoSize = true;
             this.lblFIFOInlinedCarInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblFIFOInlinedCarInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFIFOInlinedCarInfo.ForeColor = System.Drawing.Color.SeaGreen;
             this.lblFIFOInlinedCarInfo.Location = new System.Drawing.Point(92, 61);
             this.lblFIFOInlinedCarInfo.Name = "lblFIFOInlinedCarInfo";
             this.lblFIFOInlinedCarInfo.Size = new System.Drawing.Size(0, 21);
@@ -508,6 +528,7 @@
             this.lblFIFOLeavingCarInfo.AutoSize = true;
             this.lblFIFOLeavingCarInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblFIFOLeavingCarInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFIFOLeavingCarInfo.ForeColor = System.Drawing.Color.Red;
             this.lblFIFOLeavingCarInfo.Location = new System.Drawing.Point(92, 15);
             this.lblFIFOLeavingCarInfo.Name = "lblFIFOLeavingCarInfo";
             this.lblFIFOLeavingCarInfo.Size = new System.Drawing.Size(0, 21);
@@ -661,11 +682,11 @@
         private Bunifu.Framework.UI.BunifuTileButton pnlFIFOEmptyInfo;
         private MaterialSkin.Controls.MaterialListView mlvwTablesOfCars;
         private System.Windows.Forms.ColumnHeader numbOfCar;
-        private System.Windows.Forms.ColumnHeader carImage;
         private System.Windows.Forms.ColumnHeader carPlate;
         private System.Windows.Forms.ColumnHeader parkedTime;
         private System.Windows.Forms.ColumnHeader exitFIFOTime;
         private System.Windows.Forms.ColumnHeader exitPQTime;
+        private System.Windows.Forms.ImageList ilistResult;
     }
 }
 

@@ -37,8 +37,11 @@ namespace AutoparkQueue
                         }
                         last = last.Next;
                     }
-                    last.Next = N;
-                    rear = N;
+                    if (last.Next == null)
+                    {
+                        last.Next = N;
+                        rear = N;
+                    }
                 }             
             }
             count++;
