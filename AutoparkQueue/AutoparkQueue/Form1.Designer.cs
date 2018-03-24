@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Screen));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.pnlWelcome = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblWelcomeContext7 = new System.Windows.Forms.Label();
             this.lblWelcomeContext6 = new System.Windows.Forms.Label();
@@ -41,12 +42,7 @@
             this.lblWelcomHead = new System.Windows.Forms.Label();
             this.btnDevamEt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlMainOperations = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
-            this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnRestart = new Bunifu.Framework.UI.BunifuImageButton();
             this.ilistResult = new System.Windows.Forms.ImageList(this.components);
             this.pnlPQEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnlFIFOEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
@@ -71,10 +67,19 @@
             this.ilistPQ = new System.Windows.Forms.ImageList(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlControl = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblControlHead = new System.Windows.Forms.Label();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.betterTimeAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
             this.pnlWelcome.SuspendLayout();
             this.pnlMainOperations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCar)).BeginInit();
             this.pnlInformations.SuspendLayout();
@@ -225,6 +230,7 @@
             // 
             this.pnlMainOperations.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMainOperations.BackgroundImage")));
             this.pnlMainOperations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMainOperations.Controls.Add(this.btnRestart);
             this.pnlMainOperations.Controls.Add(this.mlvwTablesOfCars);
             this.pnlMainOperations.Controls.Add(this.pnlPQEmptyInfo);
             this.pnlMainOperations.Controls.Add(this.pnlFIFOEmptyInfo);
@@ -244,64 +250,21 @@
             this.pnlMainOperations.Size = new System.Drawing.Size(800, 475);
             this.pnlMainOperations.TabIndex = 2;
             // 
-            // mlvwTablesOfCars
+            // btnRestart
             // 
-            this.mlvwTablesOfCars.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.numbOfCar,
-            this.carPlate,
-            this.parkedTime,
-            this.exitFIFOTime,
-            this.exitPQTime});
-            this.mlvwTablesOfCars.Depth = 0;
-            this.mlvwTablesOfCars.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.White;
-            this.mlvwTablesOfCars.FullRowSelect = true;
-            this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mlvwTablesOfCars.HoverSelection = true;
-            this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.mlvwTablesOfCars.Location = new System.Drawing.Point(0, 294);
-            this.mlvwTablesOfCars.Margin = new System.Windows.Forms.Padding(0);
-            this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
-            this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
-            this.mlvwTablesOfCars.OwnerDraw = true;
-            this.mlvwTablesOfCars.Size = new System.Drawing.Size(800, 181);
-            this.mlvwTablesOfCars.SmallImageList = this.ilistResult;
-            this.mlvwTablesOfCars.TabIndex = 41;
-            this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
-            this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
-            // 
-            // numbOfCar
-            // 
-            this.numbOfCar.Text = "#";
-            this.numbOfCar.Width = 40;
-            // 
-            // carPlate
-            // 
-            this.carPlate.Text = "Plate";
-            this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.carPlate.Width = 140;
-            // 
-            // parkedTime
-            // 
-            this.parkedTime.Text = "Parked Time";
-            this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.parkedTime.Width = 215;
-            // 
-            // exitFIFOTime
-            // 
-            this.exitFIFOTime.Text = "Exit From FIFO";
-            this.exitFIFOTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exitFIFOTime.Width = 200;
-            // 
-            // exitPQTime
-            // 
-            this.exitPQTime.Text = "Exit From PQ";
-            this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exitPQTime.Width = 205;
+            this.btnRestart.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestart.Image = ((System.Drawing.Image)(resources.GetObject("btnRestart.Image")));
+            this.btnRestart.ImageActive = null;
+            this.btnRestart.Location = new System.Drawing.Point(383, 55);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(35, 35);
+            this.btnRestart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRestart.TabIndex = 44;
+            this.btnRestart.TabStop = false;
+            this.btnRestart.Tag = "Reset & Clear";
+            this.btnRestart.Zoom = 5;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // ilistResult
             // 
@@ -384,14 +347,15 @@
             this.btnRemoveCar.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveCar.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveCar.Image")));
             this.btnRemoveCar.ImageActive = null;
-            this.btnRemoveCar.Location = new System.Drawing.Point(383, 111);
+            this.btnRemoveCar.Location = new System.Drawing.Point(383, 137);
             this.btnRemoveCar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemoveCar.Name = "btnRemoveCar";
             this.btnRemoveCar.Size = new System.Drawing.Size(35, 35);
-            this.btnRemoveCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRemoveCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRemoveCar.TabIndex = 38;
             this.btnRemoveCar.TabStop = false;
-            this.btnRemoveCar.Zoom = 10;
+            this.btnRemoveCar.Tag = "Delete Car";
+            this.btnRemoveCar.Zoom = 5;
             this.btnRemoveCar.Click += new System.EventHandler(this.btnAracsil_Click);
             // 
             // btnAddCar
@@ -399,14 +363,15 @@
             this.btnAddCar.BackColor = System.Drawing.Color.Transparent;
             this.btnAddCar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCar.Image")));
             this.btnAddCar.ImageActive = null;
-            this.btnAddCar.Location = new System.Drawing.Point(383, 70);
+            this.btnAddCar.Location = new System.Drawing.Point(383, 96);
             this.btnAddCar.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddCar.Name = "btnAddCar";
             this.btnAddCar.Size = new System.Drawing.Size(35, 35);
-            this.btnAddCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAddCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAddCar.TabIndex = 37;
             this.btnAddCar.TabStop = false;
-            this.btnAddCar.Zoom = 10;
+            this.btnAddCar.Tag = "Add New Car";
+            this.btnAddCar.Zoom = 5;
             this.btnAddCar.Click += new System.EventHandler(this.btnAracEkle_Click);
             // 
             // pnlInformations
@@ -574,13 +539,14 @@
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.TargetControl = this.pnlControl;
             this.bunifuDragControl1.Vertical = true;
             // 
             // pnlControl
             // 
             this.pnlControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlControl.BackgroundImage")));
             this.pnlControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlControl.Controls.Add(this.lblControlHead);
             this.pnlControl.Controls.Add(this.btnExit);
             this.pnlControl.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
             this.pnlControl.GradientBottomRight = System.Drawing.Color.DodgerBlue;
@@ -591,6 +557,19 @@
             this.pnlControl.Quality = 10;
             this.pnlControl.Size = new System.Drawing.Size(800, 25);
             this.pnlControl.TabIndex = 4;
+            // 
+            // lblControlHead
+            // 
+            this.lblControlHead.AutoSize = true;
+            this.lblControlHead.BackColor = System.Drawing.Color.Transparent;
+            this.lblControlHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblControlHead.ForeColor = System.Drawing.Color.White;
+            this.lblControlHead.Location = new System.Drawing.Point(4, 6);
+            this.lblControlHead.Name = "lblControlHead";
+            this.lblControlHead.Size = new System.Drawing.Size(165, 16);
+            this.lblControlHead.TabIndex = 1;
+            this.lblControlHead.Text = "Compare Of Queue Types";
+            this.lblControlHead.Visible = false;
             // 
             // btnExit
             // 
@@ -611,6 +590,75 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // numbOfCar
+            // 
+            this.numbOfCar.Text = "#";
+            this.numbOfCar.Width = 50;
+            // 
+            // carPlate
+            // 
+            this.carPlate.Text = "Plate";
+            this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.carPlate.Width = 100;
+            // 
+            // parkedTime
+            // 
+            this.parkedTime.Text = "Parked Time";
+            this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.parkedTime.Width = 150;
+            // 
+            // exitFIFOTime
+            // 
+            this.exitFIFOTime.Text = "Exit From FIFO";
+            this.exitFIFOTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitFIFOTime.Width = 150;
+            // 
+            // exitPQTime
+            // 
+            this.exitPQTime.Text = "Exit From PQ";
+            this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitPQTime.Width = 150;
+            // 
+            // betterTimeAt
+            // 
+            this.betterTimeAt.Text = "Left Earlier At";
+            this.betterTimeAt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.betterTimeAt.Width = 200;
+            // 
+            // mlvwTablesOfCars
+            // 
+            this.mlvwTablesOfCars.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.mlvwTablesOfCars.BackColor = System.Drawing.SystemColors.Window;
+            this.mlvwTablesOfCars.BackgroundImageTiled = true;
+            this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numbOfCar,
+            this.carPlate,
+            this.parkedTime,
+            this.exitFIFOTime,
+            this.exitPQTime,
+            this.betterTimeAt});
+            this.mlvwTablesOfCars.Depth = 0;
+            this.mlvwTablesOfCars.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.White;
+            this.mlvwTablesOfCars.FullRowSelect = true;
+            this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.mlvwTablesOfCars.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+            this.mlvwTablesOfCars.Location = new System.Drawing.Point(0, 294);
+            this.mlvwTablesOfCars.Margin = new System.Windows.Forms.Padding(0);
+            this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
+            this.mlvwTablesOfCars.OwnerDraw = true;
+            this.mlvwTablesOfCars.Size = new System.Drawing.Size(800, 181);
+            this.mlvwTablesOfCars.SmallImageList = this.ilistResult;
+            this.mlvwTablesOfCars.TabIndex = 41;
+            this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
+            this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
+            // 
             // Form_Screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -624,6 +672,7 @@
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
             this.pnlMainOperations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCar)).EndInit();
             this.pnlInformations.ResumeLayout(false);
@@ -637,6 +686,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picFIFOLeavingCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFIFOInlinedIcon)).EndInit();
             this.pnlControl.ResumeLayout(false);
+            this.pnlControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
 
@@ -680,13 +730,16 @@
         private Bunifu.Framework.UI.BunifuImageButton btnAddCar;
         private Bunifu.Framework.UI.BunifuTileButton pnlPQEmptyInfo;
         private Bunifu.Framework.UI.BunifuTileButton pnlFIFOEmptyInfo;
+        private System.Windows.Forms.ImageList ilistResult;
+        private System.Windows.Forms.Label lblControlHead;
+        private Bunifu.Framework.UI.BunifuImageButton btnRestart;
         private MaterialSkin.Controls.MaterialListView mlvwTablesOfCars;
         private System.Windows.Forms.ColumnHeader numbOfCar;
         private System.Windows.Forms.ColumnHeader carPlate;
         private System.Windows.Forms.ColumnHeader parkedTime;
         private System.Windows.Forms.ColumnHeader exitFIFOTime;
         private System.Windows.Forms.ColumnHeader exitPQTime;
-        private System.Windows.Forms.ImageList ilistResult;
+        private System.Windows.Forms.ColumnHeader betterTimeAt;
     }
 }
 

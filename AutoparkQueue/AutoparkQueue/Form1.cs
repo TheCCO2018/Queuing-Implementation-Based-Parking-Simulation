@@ -14,8 +14,10 @@ namespace AutoparkQueue
             InitializeComponent();
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            pnlWelcome.Visible = true;
+            pnlMainOperations.Visible = false;
         }
 
         PQList _PQL = new PQList();
@@ -23,9 +25,6 @@ namespace AutoparkQueue
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pnlWelcome.Visible = true;
-            pnlMainOperations.Visible = false;
-
             ilistFIFO.Images.Clear();
             ilistPQ.Images.Clear();
 
@@ -44,6 +43,7 @@ namespace AutoparkQueue
         private void btnDevamEt_Click(object sender, EventArgs e)
         {
             pnlWelcome.Visible = false;
+            lblControlHead.Visible = true;
             pnlMainOperations.Visible = true;
             pnlMainOperations.BringToFront();
             mlvwTablesOfCars.Items.Clear();
@@ -68,7 +68,8 @@ namespace AutoparkQueue
             Listele(_FLL);
             Listele(_PQL);
         }
-        int i = 1;
+
+        int tableIndex = 1;
         List<Node> removedNodes = new List<Node>();
         public void AracSil()
         {
@@ -78,34 +79,46 @@ namespace AutoparkQueue
             Remove_PQL = _PQL.Remove();
             Remove_FLL = _FLL.Remove();
             removedNodes.Add(Remove_PQL);
-            if(Remove_PQL != null)
-            {
 
+            if (Remove_PQL != null)
+            {
                 // ** Deleted Car Informations as a PictureBox and Text Display**
                 int imageIndex = ilistPQ.Images.IndexOfKey(Remove_PQL.Data.id.ToString());
                 picPQLeavingCar.BackgroundImage = ilistPQ.Images[imageIndex];
                 lblPQLeavingCar.Text = "45 CCO " + Remove_PQL.Data.id + " has left the Priority Park.";
 
                 // ** Deleted Car Informations as a Table Content **
-                if(Remove_PQL.Data.id >= i)
+                if (Remove_PQL.Data.id >= tableIndex || Remove_PQL.Data.id >= Remove_FLL.Data.id)
                 {
-                    ListViewItem Item = new ListViewItem(i.ToString(), Remove_PQL.Data.carType);
+                    ListViewItem Item = new ListViewItem(tableIndex.ToString(), Remove_PQL.Data.carType);
                     Item.ImageKey = Remove_PQL.Data.id.ToString();
                     Item.SubItems.Add("45 CCO " + Remove_PQL.Data.id);
-                    Item.SubItems.Add(Remove_PQL.Data.exitTime.ToString());
+                    Item.SubItems.Add("   " + TimeSpan.FromSeconds(Remove_PQL.Data.exitTime).ToString());
                     Node last = Remove_FLL;
                     while (last.Next != Remove_FLL)
                     {
                         if (Remove_PQL.Data.id == last.Data.id)
                         {
-                            Item.SubItems.Add(last.Data.parkedTime.ToString());
+                            Item.SubItems.Add("   " + TimeSpan.FromSeconds(last.Data.parkedTime).ToString());
                             break;
                         }
                         last = last.Next;
                     }
-                    Item.SubItems.Add(Remove_PQL.Data.parkedTime.ToString());
+                    Item.SubItems.Add("   " + TimeSpan.FromSeconds(Remove_PQL.Data.parkedTime).ToString());
+                    if (last.Data.parkedTime < Remove_PQL.Data.parkedTime)
+                    {
+                        Item.SubItems.Add("Simple Queue");
+                    }
+                    else if (last.Data.parkedTime > Remove_PQL.Data.parkedTime)
+                    {
+                        Item.SubItems.Add("Priority Queue");
+                    }
+                    else
+                    {
+                        Item.SubItems.Add("Equal");
+                    }
                     mlvwTablesOfCars.Items.Add(Item);
-                    i++;
+                    tableIndex++;
                 }
             }
             if (Remove_FLL != null)
@@ -120,35 +133,45 @@ namespace AutoparkQueue
                 bool flag = false;
                 for (int i = 0; i < removedNodes.Count; i++)
                 {
-                    if(removedNodes[i].Data.id == Remove_FLL.Data.id)
+                    if (removedNodes[i].Data.id == Remove_FLL.Data.id)
                     {
                         flag = true;
                         break;
                     }
                 }
-                if(!flag)
+                if (!flag)
                 {
-                    ListViewItem Item = new ListViewItem(i.ToString(), Remove_FLL.Data.carType);
-                    Item.ImageKey = Remove_FLL.Data.id.ToString();
-                    Item.SubItems.Add("45 CCO " + Remove_FLL.Data.id);
-                    Item.SubItems.Add(Remove_FLL.Data.exitTime.ToString());
-                    Item.SubItems.Add(Remove_FLL.Data.parkedTime.ToString());
+                    ListViewItem Item = new ListViewItem(tableIndex.ToString(), Remove_FLL.Data.carType);
+                        Item.ImageKey = Remove_FLL.Data.id.ToString();
+                        Item.SubItems.Add("45 CCO " + Remove_FLL.Data.id);
+                        Item.SubItems.Add("   " + TimeSpan.FromSeconds(Remove_FLL.Data.exitTime).ToString());
+                        Item.SubItems.Add("   " + TimeSpan.FromSeconds(Remove_FLL.Data.parkedTime).ToString());
                     Node last = Remove_PQL;
                     while (last.Next != Remove_PQL)
                     {
                         if (Remove_FLL.Data.id == last.Data.id)
                         {
-                            Item.SubItems.Add(last.Data.parkedTime.ToString());
+                            Item.SubItems.Add("   " + TimeSpan.FromSeconds(last.Data.parkedTime).ToString());
                             break;
                         }
                         last = last.Next;
                     }
+                    if (last.Data.parkedTime > Remove_FLL.Data.parkedTime)
+                    {
+                        Item.SubItems.Add("Simple Queue");
+                    }
+                    else if (last.Data.parkedTime < Remove_FLL.Data.parkedTime)
+                    {
+                        Item.SubItems.Add("Priority Queue");
+                    }
+                    else
+                    {
+                        Item.SubItems.Add("Equal");
+                    }
                     mlvwTablesOfCars.Items.Add(Item);
-                    i++;
+                    tableIndex++;
                 }
-
             }
-
             Listele(_FLL);
             Listele(_PQL);
         }
@@ -267,6 +290,21 @@ namespace AutoparkQueue
                     lvwSimpleQueue.Visible = false;
                 }
             }
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            lvwPriorityQueue.Items.Clear();
+            lvwSimpleQueue.Items.Clear();
+            mlvwTablesOfCars.Items.Clear();
+            pnlInformations.Visible = false;
+            index = 0;
+            tableIndex = 1;
+            _FLL = new FIFOList();
+            _PQL = new PQList();
+            this.Form1_Load(this, null);
+            Listele(_FLL);
+            Listele(_PQL);
         }
     }
 }
