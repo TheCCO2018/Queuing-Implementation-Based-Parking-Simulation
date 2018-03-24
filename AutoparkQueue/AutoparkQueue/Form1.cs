@@ -46,6 +46,8 @@ namespace AutoparkQueue
             pnlWelcome.Visible = false;
             lblControlHead.Visible = true;
             pnlMainOperations.Visible = true;
+            btnTurkish.Visible = false;
+            btnEnglish.Visible = false;
             pnlMainOperations.BringToFront();
             mlvwTablesOfCars.Items.Clear();
             Listele(_FLL);
