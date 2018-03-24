@@ -18,6 +18,7 @@ namespace AutoparkQueue
             skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             pnlWelcome.Visible = true;
             pnlMainOperations.Visible = false;
+            btnEnglish_Click(this, null);
         }
 
         PQList _PQL = new PQList();
@@ -88,7 +89,7 @@ namespace AutoparkQueue
                 lblPQLeavingCar.Text = "45 CCO " + Remove_PQL.Data.id + " has left the Priority Park.";
 
                 // ** Deleted Car Informations as a Table Content **
-                if (Remove_PQL.Data.id >= tableIndex || Remove_PQL.Data.id >= Remove_FLL.Data.id)
+                if (Remove_PQL.Data.id >= Remove_FLL.Data.id)
                 {
                     ListViewItem Item = new ListViewItem(tableIndex.ToString(), Remove_PQL.Data.carType);
                     Item.ImageKey = Remove_PQL.Data.id.ToString();
@@ -298,13 +299,28 @@ namespace AutoparkQueue
             lvwSimpleQueue.Items.Clear();
             mlvwTablesOfCars.Items.Clear();
             pnlInformations.Visible = false;
+            lblFIFOInlinedCarInfo.Text = "";
+            lblPQQueuedCar.Text = "";
             index = 0;
             tableIndex = 1;
+            removedNodes = new List<Node>();
             _FLL = new FIFOList();
             _PQL = new PQList();
             this.Form1_Load(this, null);
             Listele(_FLL);
             Listele(_PQL);
+        }
+
+        private void btnEnglish_Click(object sender, EventArgs e)
+        {
+            pnlEnglish.Visible = true;
+            btnDevamEt.ButtonText = "Continue";
+        }
+
+        private void btnTurkish_Click(object sender, EventArgs e)
+        {
+            pnlEnglish.Visible = false;
+            btnDevamEt.ButtonText = "Devam Et";
         }
     }
 }

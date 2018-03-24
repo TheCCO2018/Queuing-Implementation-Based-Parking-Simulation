@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoparkQueue
 {
-    class PQList : LinkedList, IPQueue
+    class PQList : LinkedList
     {
         public void Insert(Node N)
         {

@@ -30,8 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Screen));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.pnlWelcome = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pnlEnglish = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblWelcomeContext7 = new System.Windows.Forms.Label();
             this.lblWelcomeContext6 = new System.Windows.Forms.Label();
             this.lblWelcomeContext5 = new System.Windows.Forms.Label();
@@ -42,7 +51,16 @@
             this.lblWelcomHead = new System.Windows.Forms.Label();
             this.btnDevamEt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlMainOperations = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblPQPark = new System.Windows.Forms.Label();
+            this.lblFIFOPARK = new System.Windows.Forms.Label();
             this.btnRestart = new Bunifu.Framework.UI.BunifuImageButton();
+            this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
+            this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.betterTimeAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ilistResult = new System.Windows.Forms.ImageList(this.components);
             this.pnlPQEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnlFIFOEmptyInfo = new Bunifu.Framework.UI.BunifuTileButton();
@@ -67,17 +85,13 @@
             this.ilistPQ = new System.Windows.Forms.ImageList(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlControl = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnEnglish = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTurkish = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblControlHead = new System.Windows.Forms.Label();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.numbOfCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.carPlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.parkedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.exitFIFOTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.exitPQTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.betterTimeAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mlvwTablesOfCars = new MaterialSkin.Controls.MaterialListView();
             this.pnlWelcome.SuspendLayout();
+            this.pnlEnglish.SuspendLayout();
             this.pnlMainOperations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).BeginInit();
@@ -92,6 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picFIFOLeavingCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFIFOInlinedIcon)).BeginInit();
             this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEnglish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTurkish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +116,7 @@
             this.pnlWelcome.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlWelcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlWelcome.BackgroundImage")));
             this.pnlWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlWelcome.Controls.Add(this.pnlEnglish);
             this.pnlWelcome.Controls.Add(this.lblWelcomeContext7);
             this.pnlWelcome.Controls.Add(this.lblWelcomeContext6);
             this.pnlWelcome.Controls.Add(this.lblWelcomeContext5);
@@ -119,6 +136,101 @@
             this.pnlWelcome.Quality = 10;
             this.pnlWelcome.Size = new System.Drawing.Size(800, 475);
             this.pnlWelcome.TabIndex = 0;
+            // 
+            // pnlEnglish
+            // 
+            this.pnlEnglish.Controls.Add(this.label1);
+            this.pnlEnglish.Controls.Add(this.label2);
+            this.pnlEnglish.Controls.Add(this.label3);
+            this.pnlEnglish.Controls.Add(this.label4);
+            this.pnlEnglish.Controls.Add(this.label5);
+            this.pnlEnglish.Controls.Add(this.label6);
+            this.pnlEnglish.Controls.Add(this.label7);
+            this.pnlEnglish.Controls.Add(this.label8);
+            this.pnlEnglish.Location = new System.Drawing.Point(0, 0);
+            this.pnlEnglish.Name = "pnlEnglish";
+            this.pnlEnglish.Size = new System.Drawing.Size(800, 366);
+            this.pnlEnglish.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(59, 325);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(592, 30);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "collected and objectify as an Autopark Problem.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(59, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(674, 30);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "entering or leaving times of cars. All of these processes ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(59, 247);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(661, 30);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "After all realizations, it will visualize the informations of ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(59, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(649, 30);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "dequeue between Simple Queue and Priority Queue.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(59, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(689, 30);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "This program will realize the operations like enqueue and";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(59, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(747, 30);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "developed by Canberk ATEŞ, Cengiz CEBECİ and Onat AKTAŞ.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(81, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(664, 30);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "This program, prepared for Data Structures lecture and ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(58, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 33);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Welcome!";
             // 
             // lblWelcomeContext7
             // 
@@ -230,6 +342,8 @@
             // 
             this.pnlMainOperations.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMainOperations.BackgroundImage")));
             this.pnlMainOperations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMainOperations.Controls.Add(this.lblPQPark);
+            this.pnlMainOperations.Controls.Add(this.lblFIFOPARK);
             this.pnlMainOperations.Controls.Add(this.btnRestart);
             this.pnlMainOperations.Controls.Add(this.mlvwTablesOfCars);
             this.pnlMainOperations.Controls.Add(this.pnlPQEmptyInfo);
@@ -250,6 +364,28 @@
             this.pnlMainOperations.Size = new System.Drawing.Size(800, 475);
             this.pnlMainOperations.TabIndex = 2;
             // 
+            // lblPQPark
+            // 
+            this.lblPQPark.AutoSize = true;
+            this.lblPQPark.BackColor = System.Drawing.Color.Transparent;
+            this.lblPQPark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPQPark.Location = new System.Drawing.Point(542, 18);
+            this.lblPQPark.Name = "lblPQPark";
+            this.lblPQPark.Size = new System.Drawing.Size(118, 19);
+            this.lblPQPark.TabIndex = 46;
+            this.lblPQPark.Text = "PRIORITY PARK";
+            // 
+            // lblFIFOPARK
+            // 
+            this.lblFIFOPARK.AutoSize = true;
+            this.lblFIFOPARK.BackColor = System.Drawing.Color.Transparent;
+            this.lblFIFOPARK.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFIFOPARK.Location = new System.Drawing.Point(150, 18);
+            this.lblFIFOPARK.Name = "lblFIFOPARK";
+            this.lblFIFOPARK.Size = new System.Drawing.Size(86, 19);
+            this.lblFIFOPARK.TabIndex = 45;
+            this.lblFIFOPARK.Text = "FIFO PARK";
+            // 
             // btnRestart
             // 
             this.btnRestart.BackColor = System.Drawing.Color.Transparent;
@@ -265,6 +401,75 @@
             this.btnRestart.Tag = "Reset & Clear";
             this.btnRestart.Zoom = 5;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
+            // mlvwTablesOfCars
+            // 
+            this.mlvwTablesOfCars.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.mlvwTablesOfCars.BackColor = System.Drawing.SystemColors.Window;
+            this.mlvwTablesOfCars.BackgroundImageTiled = true;
+            this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numbOfCar,
+            this.carPlate,
+            this.parkedTime,
+            this.exitFIFOTime,
+            this.exitPQTime,
+            this.betterTimeAt});
+            this.mlvwTablesOfCars.Depth = 0;
+            this.mlvwTablesOfCars.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.White;
+            this.mlvwTablesOfCars.FullRowSelect = true;
+            this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.mlvwTablesOfCars.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.mlvwTablesOfCars.Location = new System.Drawing.Point(0, 294);
+            this.mlvwTablesOfCars.Margin = new System.Windows.Forms.Padding(0);
+            this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
+            this.mlvwTablesOfCars.OwnerDraw = true;
+            this.mlvwTablesOfCars.Size = new System.Drawing.Size(800, 181);
+            this.mlvwTablesOfCars.SmallImageList = this.ilistResult;
+            this.mlvwTablesOfCars.TabIndex = 41;
+            this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
+            this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
+            // 
+            // numbOfCar
+            // 
+            this.numbOfCar.Text = "#";
+            this.numbOfCar.Width = 50;
+            // 
+            // carPlate
+            // 
+            this.carPlate.Text = "Plate";
+            this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.carPlate.Width = 100;
+            // 
+            // parkedTime
+            // 
+            this.parkedTime.Text = "Parked Time";
+            this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.parkedTime.Width = 150;
+            // 
+            // exitFIFOTime
+            // 
+            this.exitFIFOTime.Text = "Exit From FIFO";
+            this.exitFIFOTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitFIFOTime.Width = 150;
+            // 
+            // exitPQTime
+            // 
+            this.exitPQTime.Text = "Exit From PQ";
+            this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.exitPQTime.Width = 150;
+            // 
+            // betterTimeAt
+            // 
+            this.betterTimeAt.Text = "Left Earlier At";
+            this.betterTimeAt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.betterTimeAt.Width = 200;
             // 
             // ilistResult
             // 
@@ -299,7 +504,7 @@
             this.pnlPQEmptyInfo.ImagePosition = 20;
             this.pnlPQEmptyInfo.ImageZoom = 20;
             this.pnlPQEmptyInfo.LabelPosition = 41;
-            this.pnlPQEmptyInfo.LabelText = "The Autopark has no cars";
+            this.pnlPQEmptyInfo.LabelText = "This Autopark has no cars";
             this.pnlPQEmptyInfo.Location = new System.Drawing.Point(420, 37);
             this.pnlPQEmptyInfo.Margin = new System.Windows.Forms.Padding(6);
             this.pnlPQEmptyInfo.Name = "pnlPQEmptyInfo";
@@ -319,7 +524,7 @@
             this.pnlFIFOEmptyInfo.ImagePosition = 20;
             this.pnlFIFOEmptyInfo.ImageZoom = 20;
             this.pnlFIFOEmptyInfo.LabelPosition = 41;
-            this.pnlFIFOEmptyInfo.LabelText = "The Autopark has no cars";
+            this.pnlFIFOEmptyInfo.LabelText = "This Autopark has no cars";
             this.pnlFIFOEmptyInfo.Location = new System.Drawing.Point(10, 37);
             this.pnlFIFOEmptyInfo.Margin = new System.Windows.Forms.Padding(6);
             this.pnlFIFOEmptyInfo.Name = "pnlFIFOEmptyInfo";
@@ -546,6 +751,8 @@
             // 
             this.pnlControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlControl.BackgroundImage")));
             this.pnlControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlControl.Controls.Add(this.btnEnglish);
+            this.pnlControl.Controls.Add(this.btnTurkish);
             this.pnlControl.Controls.Add(this.lblControlHead);
             this.pnlControl.Controls.Add(this.btnExit);
             this.pnlControl.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
@@ -558,6 +765,34 @@
             this.pnlControl.Size = new System.Drawing.Size(800, 25);
             this.pnlControl.TabIndex = 4;
             // 
+            // btnEnglish
+            // 
+            this.btnEnglish.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnglish.Image = ((System.Drawing.Image)(resources.GetObject("btnEnglish.Image")));
+            this.btnEnglish.ImageActive = null;
+            this.btnEnglish.Location = new System.Drawing.Point(39, 0);
+            this.btnEnglish.Name = "btnEnglish";
+            this.btnEnglish.Size = new System.Drawing.Size(40, 25);
+            this.btnEnglish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEnglish.TabIndex = 3;
+            this.btnEnglish.TabStop = false;
+            this.btnEnglish.Zoom = 10;
+            this.btnEnglish.Click += new System.EventHandler(this.btnEnglish_Click);
+            // 
+            // btnTurkish
+            // 
+            this.btnTurkish.BackColor = System.Drawing.Color.Transparent;
+            this.btnTurkish.Image = ((System.Drawing.Image)(resources.GetObject("btnTurkish.Image")));
+            this.btnTurkish.ImageActive = null;
+            this.btnTurkish.Location = new System.Drawing.Point(0, 0);
+            this.btnTurkish.Name = "btnTurkish";
+            this.btnTurkish.Size = new System.Drawing.Size(39, 25);
+            this.btnTurkish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTurkish.TabIndex = 2;
+            this.btnTurkish.TabStop = false;
+            this.btnTurkish.Zoom = 10;
+            this.btnTurkish.Click += new System.EventHandler(this.btnTurkish_Click);
+            // 
             // lblControlHead
             // 
             this.lblControlHead.AutoSize = true;
@@ -566,9 +801,9 @@
             this.lblControlHead.ForeColor = System.Drawing.Color.White;
             this.lblControlHead.Location = new System.Drawing.Point(4, 6);
             this.lblControlHead.Name = "lblControlHead";
-            this.lblControlHead.Size = new System.Drawing.Size(165, 16);
+            this.lblControlHead.Size = new System.Drawing.Size(182, 16);
             this.lblControlHead.TabIndex = 1;
-            this.lblControlHead.Text = "Compare Of Queue Types";
+            this.lblControlHead.Text = "Comparison Of Queue Types";
             this.lblControlHead.Visible = false;
             // 
             // btnExit
@@ -590,88 +825,23 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // numbOfCar
-            // 
-            this.numbOfCar.Text = "#";
-            this.numbOfCar.Width = 50;
-            // 
-            // carPlate
-            // 
-            this.carPlate.Text = "Plate";
-            this.carPlate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.carPlate.Width = 100;
-            // 
-            // parkedTime
-            // 
-            this.parkedTime.Text = "Parked Time";
-            this.parkedTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.parkedTime.Width = 150;
-            // 
-            // exitFIFOTime
-            // 
-            this.exitFIFOTime.Text = "Exit From FIFO";
-            this.exitFIFOTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exitFIFOTime.Width = 150;
-            // 
-            // exitPQTime
-            // 
-            this.exitPQTime.Text = "Exit From PQ";
-            this.exitPQTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exitPQTime.Width = 150;
-            // 
-            // betterTimeAt
-            // 
-            this.betterTimeAt.Text = "Left Earlier At";
-            this.betterTimeAt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.betterTimeAt.Width = 200;
-            // 
-            // mlvwTablesOfCars
-            // 
-            this.mlvwTablesOfCars.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.mlvwTablesOfCars.BackColor = System.Drawing.SystemColors.Window;
-            this.mlvwTablesOfCars.BackgroundImageTiled = true;
-            this.mlvwTablesOfCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mlvwTablesOfCars.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.numbOfCar,
-            this.carPlate,
-            this.parkedTime,
-            this.exitFIFOTime,
-            this.exitPQTime,
-            this.betterTimeAt});
-            this.mlvwTablesOfCars.Depth = 0;
-            this.mlvwTablesOfCars.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mlvwTablesOfCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.mlvwTablesOfCars.ForeColor = System.Drawing.Color.White;
-            this.mlvwTablesOfCars.FullRowSelect = true;
-            this.mlvwTablesOfCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.mlvwTablesOfCars.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.mlvwTablesOfCars.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.mlvwTablesOfCars.Location = new System.Drawing.Point(0, 294);
-            this.mlvwTablesOfCars.Margin = new System.Windows.Forms.Padding(0);
-            this.mlvwTablesOfCars.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mlvwTablesOfCars.MouseState = MaterialSkin.MouseState.OUT;
-            this.mlvwTablesOfCars.Name = "mlvwTablesOfCars";
-            this.mlvwTablesOfCars.OwnerDraw = true;
-            this.mlvwTablesOfCars.Size = new System.Drawing.Size(800, 181);
-            this.mlvwTablesOfCars.SmallImageList = this.ilistResult;
-            this.mlvwTablesOfCars.TabIndex = 41;
-            this.mlvwTablesOfCars.UseCompatibleStateImageBehavior = false;
-            this.mlvwTablesOfCars.View = System.Windows.Forms.View.Details;
-            // 
             // Form_Screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.pnlControl);
-            this.Controls.Add(this.pnlMainOperations);
             this.Controls.Add(this.pnlWelcome);
+            this.Controls.Add(this.pnlMainOperations);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
+            this.pnlEnglish.ResumeLayout(false);
+            this.pnlEnglish.PerformLayout();
             this.pnlMainOperations.ResumeLayout(false);
+            this.pnlMainOperations.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCar)).EndInit();
@@ -687,6 +857,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picFIFOInlinedIcon)).EndInit();
             this.pnlControl.ResumeLayout(false);
             this.pnlControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEnglish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTurkish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
 
@@ -740,6 +912,19 @@
         private System.Windows.Forms.ColumnHeader exitFIFOTime;
         private System.Windows.Forms.ColumnHeader exitPQTime;
         private System.Windows.Forms.ColumnHeader betterTimeAt;
+        private System.Windows.Forms.Label lblPQPark;
+        private System.Windows.Forms.Label lblFIFOPARK;
+        private System.Windows.Forms.Panel pnlEnglish;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuImageButton btnEnglish;
+        private Bunifu.Framework.UI.BunifuImageButton btnTurkish;
     }
 }
 
